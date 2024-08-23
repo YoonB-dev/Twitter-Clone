@@ -42,6 +42,19 @@ const DeleteButton = styled.button`
     cursor: pointer;
 `;
 
+const EditButton = styled.button`
+    margin-right: 12px;
+    background-color: #1d9cf0;
+    color: white;
+    font-weight: 600;
+    border:0;
+    font-size: 12px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+`;
+
 export default function Tweet({userName, photo, tweet, userId, id}:ITweet){
     const user = auth.currentUser;
     const onDelete = async() => {
@@ -59,12 +72,21 @@ export default function Tweet({userName, photo, tweet, userId, id}:ITweet){
             //
         }
     }
+
+    const onEdit = () => {
+        console.log("편집 시작");
+    }
     return(
         <Wrapper>
             <Colume>
                 <UserName>{userName}</UserName>
                 <Payload>{tweet}</Payload>
-                {user?.uid === userId ? <DeleteButton onClick={onDelete}>삭제</DeleteButton> : null}
+                {user?.uid === userId ? (
+                    <>
+                    <EditButton onClick={onEdit}>편집</EditButton>
+                    <DeleteButton onClick={onDelete}>삭제</DeleteButton>
+                    </>
+                    ) : null}
             </Colume>
             <Colume>
             {photo ? (
