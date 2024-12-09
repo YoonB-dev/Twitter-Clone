@@ -5,3 +5,6 @@
 
 ### Login_Page
 <img src = "https://github.com/user-attachments/assets/37046e06-abbf-470e-bc37-70a37e967ba8" width=400>
+
+### FireBase
+파이어 베이스를 이용해 프론트에서 db조회를 했다.
