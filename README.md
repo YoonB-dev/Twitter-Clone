@@ -7,4 +7,9 @@
 <img src = "https://github.com/user-attachments/assets/37046e06-abbf-470e-bc37-70a37e967ba8" width=400>
 
 ### FireBase
-파이어 베이스를 이용해 프론트에서 db조회를 했다.
+파이어 베이스를 이용해 프론트에서 db조회.
+
+### 주요 기능
+1. tweet 올리기
+2. tweet에 댓글 달기
+3. 내가 올린 tweet만 조회기능
